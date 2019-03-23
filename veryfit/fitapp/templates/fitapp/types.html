@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>FAVORITE KINDS OF EXERCISE</h2>
+<table class='table'>
+    <tr>
+        <th>Name</th>
+        <th>Website</th>
+        <th>Description</th>
+    </tr>
+    {% for item in type_list %}
+        <tr>
+            <td>{{ item.exername }}</td>
+            <td>{{ item.exerurl}}</td>
+            <td>{{ item.exerscript }}</td>
+        </tr>
+    
+        {% endfor %}
+
+</table>
+
+
+{% endblock %}

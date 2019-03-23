@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Exerlog</h2>
+<table class='table'>
+    <tr>
+        <th>Date</th>
+        <th>Type of Exercise</th>
+    </tr>
+    {% for item in log_list %}
+        <tr>
+            <td><a href="{% url 'detlog' id=item.id %}">{{ item.entrydate }}</a></td>
+            <td>{{ item.exertype}}</td>
+        </tr>
+    
+        {% endfor %}
+
+</table>
+
+
+{% endblock%}
